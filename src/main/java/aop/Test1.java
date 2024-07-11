@@ -13,10 +13,7 @@ public class Test1 {
 
         library2.getMagazine();
         library2.getBook();
-        library2.returnMagazine();
-        library2.returnBook();
-        library2.addBook();
-        library2.addMagazine();
+
 
 
 
