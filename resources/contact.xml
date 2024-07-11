@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE contacts [
+        <!ELEMENT contacts (contact*)>
+        <!ELEMENT contact (name, age, email)>
+        <!ELEMENT age (#PCDATA)>
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT email (#PCDATA)>
+        ]>
+
+<contacts>
+    <contact>
+        <name>Dima Khodosevich</name>
+        <age>29</age>
+        <email>dimakhodosevich95@gmail.com</email>
+    </contact>
+</contacts>
