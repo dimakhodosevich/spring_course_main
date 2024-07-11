@@ -9,30 +9,54 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class LoggingAndSecurityAspect {
 
-    @Pointcut("execution( * aop.UniversityLibrary.get*())")
-    private void allGetMethodFromUniversityLibrary(){};
+    @Pointcut("execution(* aop.UniversityLibrary.*())")
+    private void allMethodFromUniversityLibrary(){};
 
-    @Pointcut("execution(* aop.UniversityLibrary.return*())")
-    private void allReturnMethodFromUniversityLibrary(){};
+    @Pointcut("execution(* aop.UniversityLibrary.addMagazine())")
+    private void addMagazineMethodFromUniversityLibrary(){};
 
-    @Pointcut("allGetMethodFromUniversityLibrary() || allReturnMethodFromUniversityLibrary()")
-    private void allGetAndReturnMethodFromUniversityLibrary(){};
+    @Pointcut("allMethodFromUniversityLibrary() && !addMagazineMethodFromUniversityLibrary()")
+    private void allMethodWithoutAddMagazineMethodFromUniversityLibrary(){};
 
 
-    @Before("allGetMethodFromUniversityLibrary()")
-    public void beforeGetLoggingAdvice(){
-        System.out.println("beforeGetLoggingAdvice: writing log#1");
+
+    @Before("allMethodWithoutAddMagazineMethodFromUniversityLibrary()")
+    public void beforeAllMethodFromUniversityLibraryWithoutAddMagazine(){
+        System.out.println("beforeAllMethodFromUniversityLibraryWithoutAddMagazine: writing logging log#super");
     }
 
-    @Before("allReturnMethodFromUniversityLibrary()")
-    public void beforeReturnLoggingAdvice(){
-        System.out.println("beforeReturnLoggingAdvice: writing log#2");
-    }
 
-    @Before("allGetAndReturnMethodFromUniversityLibrary()")
-    public void beforeGetAndReturnLoggingAdvice(){
-        System.out.println("allGetAndReturnMethodFromUniversityLibrary: writing log#3");
-    }
+
+
+
+
+
+
+
+//    @Pointcut("execution( * aop.UniversityLibrary.get*())")
+//    private void allGetMethodFromUniversityLibrary(){};
+//
+//    @Pointcut("execution(* aop.UniversityLibrary.return*())")
+//    private void allReturnMethodFromUniversityLibrary(){};
+//
+//    @Pointcut("allGetMethodFromUniversityLibrary() || allReturnMethodFromUniversityLibrary()")
+//    private void allGetAndReturnMethodFromUniversityLibrary(){};
+//
+//
+//    @Before("allGetMethodFromUniversityLibrary()")
+//    public void beforeGetLoggingAdvice(){
+//        System.out.println("beforeGetLoggingAdvice: writing log#1");
+//    }
+//
+//    @Before("allReturnMethodFromUniversityLibrary()")
+//    public void beforeReturnLoggingAdvice(){
+//        System.out.println("beforeReturnLoggingAdvice: writing log#2");
+//    }
+//
+//    @Before("allGetAndReturnMethodFromUniversityLibrary()")
+//    public void beforeGetAndReturnLoggingAdvice(){
+//        System.out.println("allGetAndReturnMethodFromUniversityLibrary: writing log#3");
+//    }
 
 
 }

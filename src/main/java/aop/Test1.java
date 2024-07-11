@@ -11,9 +11,12 @@ public class Test1 {
         UniversityLibrary library2 = context.getBean("universityLibraryBean", UniversityLibrary.class);
 
 
+        library2.getMagazine();
         library2.getBook();
         library2.returnMagazine();
+        library2.returnBook();
         library2.addBook();
+        library2.addMagazine();
 
 
 
