@@ -12,7 +12,8 @@ public class Test1 {
 
 
         library2.getBook();
-        library2.getMagazine();
+        library2.returnMagazine();
+        library2.addBook();
 
 
 

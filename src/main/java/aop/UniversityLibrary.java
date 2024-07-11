@@ -18,5 +18,21 @@ public class UniversityLibrary extends AbstractLibrary {
     }
 
 
+    public void returnBook(){
+        System.out.println("Мы возвращаем книгу в библиотеку ");
+    }
 
+
+    public void returnMagazine(){
+        System.out.println("Мы возвращаем книгу в библиотеку ");
+    }
+
+    public void addBook(){
+        System.out.println("Мы добавили книгу в библиотеку");
+    }
+
+
+    public void addMagazine(){
+        System.out.println("Мы добавили журнал в библиотеку");
+    }
 }
