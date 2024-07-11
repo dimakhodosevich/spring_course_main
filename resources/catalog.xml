@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<catalog xmlns="http://www.spring_course_main.com/catalog"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.spring_course_main.com/catalog catalog.xsd">
+
+    <book id="1">
+        <title>sdfas</title>
+        <author>asdfasdf</author>
+        <genre>asdfasdfasdf</genre>
+        <price>asdfasd</price>
+        <publish_date>2022-02-02</publish_date>
+        <description>dddddddddd</description>
+    </book>
+
+
+    <book id="2">
+        <title>sdfas</title>
+        <author>asdfasdf</author>
+        <genre>asdfasdfasdf</genre>
+        <price>asdfasd</price>
+        <publish_date>2022-02-02</publish_date>
+        <description>dddddddddd</description>
+    </book>
+
+
+
+    <book id="4">
+        <title>sdfas</title>
+        <author>asdfasdf</author>
+        <genre>asdfasdfasdf</genre>
+        <price>asdfasd</price>
+        <publish_date>2022-02-02</publish_date>
+        <description>dddddddddd</description>
+    </book>
+
+
+</catalog>

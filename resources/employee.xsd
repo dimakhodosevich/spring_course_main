@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.company.com/example"
+           targetNamespace="http://www.company.com/example"
+           elementFormDefault="qualified">
+
+    <xs:element name="company">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="employee" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string"></xs:element>
+                            <xs:element name="age" type="xs:integer"></xs:element>
+                            <xs:element name="position" type="xs:string"></xs:element>
+                            <xs:element name="salary" type="xs:decimal"></xs:element>
+                            <xs:element name="startDate" type="xs:date"></xs:element>
+                            <xs:element name="addres" type="xs:string"></xs:element>
+                            <xs:element name="email" type="xs:string"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+
+
+
+
+
+</xs:schema>
