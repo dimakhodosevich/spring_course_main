@@ -20,8 +20,11 @@ public class StudentTest {
        studentUniversity.addStudent(st2);
        studentUniversity.addStudent(st3);
 
-       List<Student> list = studentUniversity.getStudents();
-
+       try {
+           List<Student> list = studentUniversity.getStudents();
+       } catch (Exception e){
+           System.out.println(e);
+       }
 
         System.out.println(studentUniversity);
 
