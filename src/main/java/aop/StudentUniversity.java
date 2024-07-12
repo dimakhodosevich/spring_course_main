@@ -27,7 +27,7 @@ public class StudentUniversity {
             System.out.println(s);
         }
 
-        students.get(10);
+
         return students;
     }
 

@@ -2,6 +2,7 @@ package aop.aspects;
 
 import aop.Student;
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.core.annotation.Order;
@@ -43,9 +44,18 @@ public class StudentLoggingAspect {
 //    }
 
 
-    @AfterThrowing(pointcut = "allGetMethodsFromStudentUniversity()",
-                   throwing = "exception")
-    public void afterExceptionAllGetMethodsFromStudentUniversityAdvice(Throwable exception){
-        System.out.println("Логируем исключение: " + exception);
+//    @AfterThrowing(pointcut = "allGetMethodsFromStudentUniversity()",
+//                   throwing = "exception")
+//    public void afterExceptionAllGetMethodsFromStudentUniversityAdvice(Throwable exception){
+//        System.out.println("Логируем исключение: " + exception);
+//    }
+
+
+    @Around("allGetMethodsFromStudentUniversity())")
+    public Object aroundAllGetMethodsFromStudentUniversityAdvice(ProceedingJoinPoint joinPoint) throws Throwable {
+        System.out.println("aroundAllGetMethodsFromStudentUniversityAdvice: выполнение...");
+
+        return joinPoint.proceed();
     }
+
 }
