@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<company    xmlns="http://www.company.com/example"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.company.com/example employee.xsd">
+
+
+        <employee>
+            <name>Dima Khodosevich</name>
+            <age>29</age>
+            <position>Head of department</position>
+            <salary>23.00</salary>
+            <startDate>2023-11-30</startDate>
+            <addres>p.Oktybrski</addres>
+            <email>dimakhodosevich@gmail.com</email>
+        </employee>
+
+    <employee>
+        <name>Dima Khodosevich</name>
+        <age>29</age>
+        <position>Head of department</position>
+        <salary>1740.00</salary>
+        <startDate>2023-11-30</startDate>
+        <addres>p.Oktybrski</addres>
+        <email>dimakhodosevich@gmail.com</email>
+    </employee>
+
+</company>

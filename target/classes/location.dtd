@@ -1,0 +1,7 @@
+
+<!ELEMENT locations (location*)>
+<!ELEMENT location (city, population, language)>
+<!ATTLIST location id TYPE (#PCDATA) #IMPLIED>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT population (#PCDATA)>
+<!ELEMENT language (#PCDATA)>
