@@ -1,9 +1,6 @@
 package hibernate_test.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name="employees")
@@ -11,6 +8,10 @@ public class Employee {
 
     @Id
     @Column(name="id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // всегда указывать -  стратегия основана на автоматическом увеличении id по правилам базы данных
+//    @GeneratedValue(strategy = GenerationType.SEQUENCE) - не выгодно
+//    @GeneratedValue(strategy = GenerationType.TABLE) // создает таблицу и из нее потом уже делает auto_increment - не выгодно
+//    @GeneratedValue(strategy = GenerationType.AUTO) // default - ориентация на базу данных - не выгодно
     private int id;
     @Column(name="name")
     private String name;

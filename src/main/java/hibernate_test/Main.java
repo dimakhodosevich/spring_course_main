@@ -11,6 +11,7 @@ public class Main {
         SessionFactory factory = new Configuration().configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Employee.class).buildSessionFactory();
 
+
         try {
             // Получение текущей сессии
             Session session = factory.getCurrentSession();
