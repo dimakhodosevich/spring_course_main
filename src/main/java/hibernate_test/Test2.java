@@ -17,7 +17,7 @@ public class Test2 {
             Session session = sessionFactory.getCurrentSession();
             session.beginTransaction();
 
-            List<Employee> list = session.createQuery("from Employee").getResultList();
+            List<Employee> list = session.createQuery("from Employee WHERE name='Dima' AND id IN (3,4) ").getResultList();
 
             for (Employee e: list) {
                 System.out.println(e);
