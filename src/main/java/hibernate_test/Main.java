@@ -17,7 +17,7 @@ public class Main {
             Session session = factory.getCurrentSession();
 
             // Создание объекта Employee
-            Employee employee = new Employee("Dima", "Khodosevich", "IT", 500);
+            Employee employee = new Employee("Yna", "Sidorova", "Engeneer", 1000);
 
             // Начало транзакции
             session.beginTransaction();
@@ -27,6 +27,8 @@ public class Main {
 
             // Подтверждение транзакции
             session.getTransaction().commit();
+
+            System.out.println(employee);
 
         } finally {
             // Закрытие фабрики сессий
